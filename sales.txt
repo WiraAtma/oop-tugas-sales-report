@@ -1,0 +1,3 @@
+#id,item,quantity,price
+0,laptop,3,1000000
+1,ram,5,500000
