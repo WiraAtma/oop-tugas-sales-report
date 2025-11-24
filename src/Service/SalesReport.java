@@ -52,9 +52,4 @@ public class SalesReport {
             System.out.println("Gagal menulis laporan: " + e.getMessage());
         }
     }
-
-    private static String formatCurrency(double amount) {
-        DecimalFormat df = new DecimalFormat("#,##0.000");
-        return df.format(amount).replace(",", ".");
-    }
 }

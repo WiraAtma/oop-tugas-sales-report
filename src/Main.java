@@ -11,9 +11,6 @@ public class Main {
 
         double total = TransactionProcessor.getTotalSales(transactionData);
 
-        // Ubah dari:
-        // SalesReport.writeReport("report.txt", total);
-        // Menjadi:
         SalesReport.writeReport("report.txt", transactionData, total);
 
         System.out.println("Laporan berhasil dibuat, Cek report.txt");
