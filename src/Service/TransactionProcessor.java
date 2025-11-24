@@ -5,12 +5,12 @@ import java.util.*;
 
 public class TransactionProcessor {
 
-    public static List<Transaction> parseData(List<String> data) {
-        List<Transaction> trx = new ArrayList<>();
+    public static List<Transaction> parseSalesData(List<String> data) {
+        List<Transaction> list = new ArrayList<>();
 
         for (String line : data) {
             if (line.startsWith("#") || line.trim().isEmpty())
-                continue; // skip header
+                continue;
 
             String[] parts = line.split(",");
 
@@ -19,16 +19,16 @@ public class TransactionProcessor {
             int qty = Integer.parseInt(parts[2].trim());
             double price = Double.parseDouble(parts[3].trim());
 
-            trx.add(new Transaction(id, item, qty, price));
+            list.add(new Transaction(id, item, qty, price));
         }
 
-        return trx;
+        return list;
     }
 
-    public static double getTotalSales(List<Transaction> trx) {
+    public static double getTotalSales(List<Transaction> list) {
         double total = 0;
 
-        for (Transaction t : trx) {
+        for (Transaction t : list) {
             total += t.getTotal();
         }
 
