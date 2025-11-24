@@ -23,15 +23,15 @@ public class SalesReport {
             bw.write("------------------------------");
             bw.newLine();
 
-            bw.write(String.format("%-8s %-20s %8s %15s %15s",
+            bw.write(String.format("%-8s %-20s %-8s %-15s %-15s",
                     "ID", "Item", "Qty", "Price", "Total"));
             bw.newLine();
             bw.write("--------------------------------------------------------------------------------");
             bw.newLine();
 
             for (Transaction t : transactions) {
-                bw.write(String.format("%03d %20s %8d %15s %15s",
-                        t.getId(),
+                bw.write(String.format("%-8s %-20s %-8d %-15s %-15s",
+                        String.format("%03d", t.getId()),
                         t.getItem(),
                         t.getQuantity(),
                         t.getPrice(),
@@ -46,7 +46,6 @@ public class SalesReport {
             bw.newLine();
             bw.write("------------------------------");
             bw.newLine();
-
 
         } catch (IOException e) {
             System.out.println("Gagal menulis laporan: " + e.getMessage());

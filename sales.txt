@@ -1,6 +1,6 @@
 #id,item,quantity,price
-000,Laptop,3,1000000
+000,Laptop,3,1000
 001,Ram,5,500000
-002,Proyektor,10,1200000
-003,Tv,8,3000000
-004,monitor,10,2000000
+002,Proyektor,10,120000
+003,Tv,8,3000
+004,monitor,10,20000
